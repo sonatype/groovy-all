@@ -1,0 +1,111 @@
+<!--
+
+    Copyright (c) 2020-present Sonatype, Inc. All rights reserved.
+
+    This program is licensed to you under the Apache License Version 2.0,
+    and you may not use this file except in compliance with the Apache License Version 2.0.
+    You may obtain a copy of the Apache License Version 2.0 at http://www.apache.org/licenses/LICENSE-2.0.
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the Apache License Version 2.0 is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.buildsupport</groupId>
+    <artifactId>public-parent</artifactId>
+    <version>16</version>
+  </parent>
+
+  <groupId>org.sonatype.groovy</groupId>
+  <artifactId>groovy-all</artifactId>
+  <version>2.5.9-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>Groovy Runtime</name>
+
+  <inceptionYear>2020</inceptionYear>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <groovy.version>2.5.9</groovy.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy</artifactId>
+      <version>${groovy.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-json</artifactId>
+      <version>${groovy.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-jsr223</artifactId>
+      <version>${groovy.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-xml</artifactId>
+      <version>${groovy.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/classes</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-Name>Groovy Runtime</Bundle-Name>
+            <Bundle-SymbolicName>groovy-all</Bundle-SymbolicName>
+            <Bundle-ClassPath>.</Bundle-ClassPath>
+            <Extension-Name>groovy</Extension-Name>
+            <Eclipse-BuddyPolicy>dependent</Eclipse-BuddyPolicy>
+            <DynamicImport-Package>*</DynamicImport-Package>
+            <_includeresource>@${project.build.directory}/classes/!/!META-INF/(INDEX.LIST|MANIFEST.MF)</_includeresource>
+            <Export-Package>*</Export-Package>
+            <Import-Package>*;resolution:=optional</Import-Package>
+            <Provide-Capability>
+              osgi.serviceloader;osgi.serviceloader="org.apache.groovy.json.FastStringServiceFactory",
+              osgi.serviceloader;osgi.serviceloader="javax.script.ScriptEngineFactory"
+            </Provide-Capability>
+            <Require-Capability>
+              osgi.extender;filter:="(osgi.extender=osgi.serviceloader.registrar)",
+              osgi.extender;filter:="(osgi.extender=osgi.serviceloader.processor)",
+              osgi.serviceloader;filter:="(osgi.serviceloader=org.apache.groovy.json.FastStringServiceFactory)";cardinality:=multiple,
+              osgi.serviceloader;filter:="(osgi.serviceloader=javax.script.ScriptEngineFactory)";cardinality:=multiple
+            </Require-Capability>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
