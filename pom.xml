@@ -37,29 +37,6 @@
     <groovy.version>2.5.9</groovy.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy</artifactId>
-      <version>${groovy.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-json</artifactId>
-      <version>${groovy.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-jsr223</artifactId>
-      <version>${groovy.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-xml</artifactId>
-      <version>${groovy.version}</version>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -70,10 +47,52 @@
             <id>unpack</id>
             <phase>process-resources</phase>
             <goals>
-              <goal>unpack-dependencies</goal>
+              <goal>unpack</goal>
             </goals>
             <configuration>
               <outputDirectory>${project.build.directory}/classes</outputDirectory>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-ant</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-cli-commons</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-groovydoc</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-json</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-jsr223</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-test</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-xml</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
         </executions>
