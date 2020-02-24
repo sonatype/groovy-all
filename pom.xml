@@ -84,6 +84,11 @@
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-nio</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-test</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
