@@ -18,7 +18,9 @@ A repackaging of the following artifacts into a single bundle:
 * org.codehaus.groovy:groovy
 * org.codehaus.groovy:groovy-ant
 * org.codehaus.groovy:groovy-cli-commons
+* org.codehaus.groovy:groovy-datetime
 * org.codehaus.groovy:groovy-groovydoc
+* org.codehaus.groovy:groovy-jmx
 * org.codehaus.groovy:groovy-json
 * org.codehaus.groovy:groovy-jsr223
 * org.codehaus.groovy:groovy-nio
