@@ -1,4 +1,4 @@
 moduleName=groovy-all
 moduleVersion=2.5.9
-extensionClasses=org.codehaus.groovy.jsr223.ScriptExtensions,org.codehaus.groovy.runtime.NioGroovyMethods,org.codehaus.groovy.runtime.XmlGroovyMethods
-staticExtensionClasses=org.codehaus.groovy.jsr223.ScriptStaticExtensions
+extensionClasses=org.codehaus.groovy.jsr223.ScriptExtensions,org.codehaus.groovy.runtime.NioGroovyMethods,org.codehaus.groovy.runtime.XmlGroovyMethods,org.apache.groovy.datetime.extensions.DateTimeExtensions
+staticExtensionClasses=org.codehaus.groovy.jsr223.ScriptStaticExtensions,org.apache.groovy.datetime.extensions.DateTimeStaticExtensions

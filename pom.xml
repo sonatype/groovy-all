@@ -69,6 +69,11 @@
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-datetime</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-groovydoc</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
