@@ -79,6 +79,11 @@
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-jmx</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-json</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
