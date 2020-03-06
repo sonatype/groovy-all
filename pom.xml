@@ -69,12 +69,32 @@
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-cli-picocli</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-console</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-datetime</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-docgenerator</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-groovydoc</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-groovysh</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
                 <artifactItem>
@@ -94,12 +114,47 @@
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-macro</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-nio</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-servlet</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-sql</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-swing</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-templates</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
                   <artifactId>groovy-test</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-test-junit5</artifactId>
+                  <version>${groovy.version}</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.codehaus.groovy</groupId>
+                  <artifactId>groovy-testng</artifactId>
                   <version>${groovy.version}</version>
                 </artifactItem>
                 <artifactItem>
