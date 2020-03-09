@@ -24,7 +24,7 @@
 
   <groupId>org.sonatype.groovy</groupId>
   <artifactId>groovy-all</artifactId>
-  <version>2.5.9-SNAPSHOT</version>
+  <version>2.5.10-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Groovy Runtime</name>
 
@@ -34,10 +34,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <groovy.version>2.5.9</groovy.version>
+    <groovy.version>2.5.10</groovy.version>
   </properties>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
